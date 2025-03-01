@@ -13,7 +13,7 @@ public class User
     public string Gender { get; set; }
     public DateTime BirthDate { get; set; }
     public string Location { get; set; }
-    public bool ShowOnline { get; set; }
+    public byte ShowOnline { get; set; }
     public string MemberIp { get; set; }
     public string SecretQuestion { get; set; }
     public string SecretAnswer { get; set; }
