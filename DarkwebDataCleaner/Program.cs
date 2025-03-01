@@ -1,16 +1,15 @@
 ﻿using System.Globalization;
 using CsvHelper;
 using CsvHelper.Configuration;
-using DarkwebDataCleaner.Data.Models;
 
 namespace DarkwebDataCleaner;
 
 class Program
 {
+    private const string filePath = "Data/users.csv";
+
     static void Main(string[] args)
     {
-        string filePath = "Data/Models/users.csv";
-
         // Open the file and read the data.
         using var reader = new StreamReader(filePath);
         using var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture));
