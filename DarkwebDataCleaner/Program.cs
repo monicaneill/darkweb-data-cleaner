@@ -6,34 +6,21 @@ namespace DarkwebDataCleaner;
 
 class Program
 {
-    private const string filePath = "Data/users.csv";
-
     static void Main(string[] args)
     {
-        // Open the file and read the data.
-        using var reader = new StreamReader(filePath);
-        using var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture));
+        const string inputCsvPath = "Data/users.csv";  
+        const string outputCsvPath = "breached_users.csv"; 
 
-        // Read the rows
-        var records = csv.GetRecords<User>().ToList();
+        var csvProcessor = new CsvProcessor(inputCsvPath, outputCsvPath);
+        csvProcessor.ProcessCsv();
 
-        foreach (var user in records)
+        if (File.Exists(outputCsvPath))
         {
-            Console.WriteLine($"User ID: {user.UserId}, " +
-                              $"User Name: {user.UserName}, " +
-                              $"Date Registered: {user.DateRegistered}, " +
-                              $"Last Login: {user.LastLogin}, " +
-                              $"Real Name: {user.RealName}, " +
-                              $"Password: {user.Password}, " +
-                              $"Password Hash: {user.PasswordHash}, " +
-                              $"Email Address: {user.EmailAddress}, " +
-                              $"Gender: {user.Gender}, " +
-                              $"Birth Date: {user.BirthDate}, " +
-                              $"Location: {user.Location}, " +
-                              $"Show Online: {user.ShowOnline}, " +
-                              $"Member IP: {user.MemberIp}, " +
-                              $"Secret Question: {user.SecretQuestion}, " +
-                              $"Secret Answer: {user.SecretAnswer}");
+            Console.WriteLine($"CSV successfully created at: {Path.GetFullPath(outputCsvPath)}");
+        }
+        else
+        {
+            Console.WriteLine("Failed to create CSV.");
         }
     }
 }
