@@ -1,12 +1,13 @@
 # darkweb-data-cleaner
 This Project was done in response to the tech task https://github.com/Boxphish/techtest-001/tree/main
+Project was managed via https://trello.com/b/3UfyaIv4/darkweb-cleaner-project-management
 
 This project processes fake compromised user data from a CSV file, transforms it to match a predefined schema, and exports the cleaned data into a new CSV file. 
 
 I had started but failed to complete recovering the plaintext passwords using the rainbow table, but I managed to map the secret questions correctly. I had also initially started going down the path of
 using database tables as I felt that would be better for scalability but was struggling to manage this so stuck with just handling csv reader directly which was much simpler. I believe if I'd gone
 down this path this would have addressed Bonus Points 1. For Bonus Point 2, I can see that there is some corrupted data regarding the DOB. A method that handles/transforms date input to make sure
-it is of the correct type/format would probably be all that would be needed to combat this
+it is of the correct type/format would probably be all that would be needed to combat this. This project also has no unit tests.
 
 ## Key Features
 - Reads and parses the `users.csv` file.
