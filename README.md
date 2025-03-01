@@ -16,7 +16,7 @@ it is of the correct type/format would probably be all that would be needed to c
 - Exports collated transformed data to a new `breached_users.csv` file.
 
 # Running project
-- Clone repo and run the solution (ToDo - add release exe so don't need to run via IDE). You should see the location of your newly generated csv file path like so:
+- Clone repo and run the solution, alternatively if you don't have access to an IDE please see ![image](https://github.com/user-attachments/assets/f9b1ed61-418a-479a-af74-3219ea1c7c86) where you can download the asset to execute locally. You should see the location of your newly generated csv file path like so:
 ![image](https://github.com/user-attachments/assets/b221d02f-7629-43a8-bc1c-4fb845fa26b0)
 - Locate the CSV, you will have an output like so:
 ![image](https://github.com/user-attachments/assets/47972c8e-438b-425c-a28f-0df95bf21994)
