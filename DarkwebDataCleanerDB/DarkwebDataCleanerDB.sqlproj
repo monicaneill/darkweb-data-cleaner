@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{1c08bb6b-ea5a-4ed7-b53d-2032d7dca061}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -63,5 +63,8 @@
     <Build Include="dbo\Tables\Users.sql" />
     <Build Include="dbo\Tables\RainbowTable.sql" />
     <Build Include="dbo\Tables\BreachedDataTable.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DarkwebDataCleanerDB.publish.xml" />
   </ItemGroup>
 </Project>
